@@ -12,13 +12,22 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        final Intent inten = new Intent(this, gameActivity.class);
-        Button play = (Button) findViewById(R.id.Button_play);
 
+        final Intent game = new Intent(this, gameActivity.class);
+        Button play = (Button) findViewById(R.id.Button_play);
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(inten);
+                startActivity(game);
+            }
+        });
+
+        final Intent seting = new Intent(this, SetingsActivity.class);
+        Button set = (Button) findViewById(R.id.Setings);
+        set.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(seting);
             }
         });
     }

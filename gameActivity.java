@@ -8,10 +8,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+
 import java.util.ArrayList;
 import java.util.Random;
 
-public class gameActivity extends AppCompatActivity {
+
+public class gameActivity extends AppCompatActivity{
     private Button otv1, otv2, otv3, otv4, ran_Button ;
     private ArrayList<Button> Buttons = new ArrayList<Button>();
     @Override
@@ -25,12 +27,13 @@ public class gameActivity extends AppCompatActivity {
         Buttons.add(otv1); Buttons.add(otv2); Buttons.add(otv3); Buttons.add(otv4);
         full();
 
-        // Log.e("sad", Integer.toString(R.id.primer));
+        //SetingsActivity a = SetingsActivity();
+        //Log.e("sad", Integer.toString(a.raznicha));
     }
     private String primer (){
         int chislo = randint(5, 50);
         int chislo1 = randint(5, 50);
-        int chislo2 = randint(2, 50);
+        int chislo2 = randint(5, 50);
         String strochka = Integer.toString(chislo) + "+" + Integer.toString(chislo1) +  "-" + Integer.toString(chislo2) + "=";
 
         fillTextView(Integer.toString(chislo) + " + " + Integer.toString(chislo1) +  " - " + Integer.toString(chislo2) + " = ");
