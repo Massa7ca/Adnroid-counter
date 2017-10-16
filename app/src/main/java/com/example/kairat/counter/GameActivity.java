@@ -1,5 +1,6 @@
 package com.example.kairat.counter;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -16,6 +17,7 @@ import java.util.Random;
 public class GameActivity extends AppCompatActivity{
     private Button otv1, otv2, otv3, otv4, ran_Button ;
     private ArrayList<Button> Buttons = new ArrayList<Button>();
+    private int max_number = 10;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,15 +27,22 @@ public class GameActivity extends AppCompatActivity{
         otv3 = (Button) findViewById(R.id.otvet3);
         otv4 = (Button) findViewById(R.id.otvet4);
         Buttons.add(otv1); Buttons.add(otv2); Buttons.add(otv3); Buttons.add(otv4);
+        get_seting(getIntent());
         main();
 
         //SetingsActivity a = SetingsActivity();
         //Log.e("sad", Integer.toString(a.raznicha));
     }
+
+    private void get_seting(Intent intend){
+        max_number = Integer.valueOf(intend.getStringExtra("max_number"));
+
+    }
+
     private String primer (){
-        int chislo = randint(5, 50);
-        int chislo1 = randint(5, 50);
-        int chislo2 = randint(5, 50);
+        int chislo = randint(0, max_number);
+        int chislo1 = randint(0, max_number);
+        int chislo2 = randint(0, max_number);
         String strochka = Integer.toString(chislo) + "+" + Integer.toString(chislo1) +  "-" + Integer.toString(chislo2) + "=";
 
         fillTextView(Integer.toString(chislo) + " + " + Integer.toString(chislo1) +  " - " + Integer.toString(chislo2) + " = ");
@@ -48,8 +57,7 @@ public class GameActivity extends AppCompatActivity{
                 list.add(now);
                 list.add(element);
                 now = "";
-            }
-            else{
+            } else{
                 now += element;
             }
         }
@@ -61,8 +69,7 @@ public class GameActivity extends AppCompatActivity{
             //Log.e(znack, chislo);
             if (znack.equals("+")) {
                 otvet += Integer.valueOf(chislo);
-            }
-            else if (znack.equals("-")) {
+            } else if (znack.equals("-")) {
                 otvet -= Integer.valueOf(chislo);
             }
 
@@ -95,8 +102,7 @@ public class GameActivity extends AppCompatActivity{
             public void onClick(View v) {
                 if (otvet_string.equals(knopka.getText())){
                     main();
-                }
-                else{
+                } else{
                     knopka.setTextColor(Color.RED);
 
                 }

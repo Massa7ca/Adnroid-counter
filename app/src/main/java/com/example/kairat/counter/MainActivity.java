@@ -11,9 +11,9 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     Button play, set;
-
     final int REQUEST_CODE_SETING = 1;
     private int max_number = 10;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()){
             case R.id.Button_play:
                 intent = new Intent(this, GameActivity.class);
+                intent.putExtra("max_number", String.valueOf(max_number));
                 startActivity(intent);
                 break;
             case R.id.Setings:
@@ -51,8 +52,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     data.getIntExtra("max_number", 10));
             switch (requestCode){
                 case REQUEST_CODE_SETING:
-                    int color = data.getIntExtra("max_number", 10);
-                    max_number = color;
+                    max_number = data.getIntExtra("max_number", 10);
                     break;
             }
         }
