@@ -1,1 +1,1 @@
-/home/kairat/AndroidStudioProjects/counter/settings.gradle
+include ':app'
