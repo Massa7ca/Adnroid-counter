@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 import android.view.View;
-import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -37,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.Setings:
                 intent = new Intent(this, SetingsActivity.class);
+                intent.putExtra("max_number", String.valueOf(max_number));
                 startActivityForResult(intent, REQUEST_CODE_SETING);
                 //Log.e("myLogs", "requestCode = ");
                 break;

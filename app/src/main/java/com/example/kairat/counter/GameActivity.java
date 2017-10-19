@@ -56,6 +56,7 @@ public class GameActivity extends AppCompatActivity{
             if (element.equals("+") || element.equals("-") || element.equals("=")) {
                 list.add(now);
                 list.add(element);
+                //list.()
                 now = "";
             } else{
                 now += element;
@@ -97,6 +98,7 @@ public class GameActivity extends AppCompatActivity{
     private void On_Click(String otvett, Button Knopka){
         final String otvet_string = otvett;
         final Button knopka = Knopka;
+
         knopka.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
