@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button play, set;
     final int REQUEST_CODE_SETING = 1;
     private int max_number = 10;
+    private int kolichestvo_chisel = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,13 +33,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.Button_play:
                 intent = new Intent(this, GameActivity.class);
                 intent.putExtra("max_number", String.valueOf(max_number));
+                intent.putExtra("kolichestvo_chisel", String.valueOf(kolichestvo_chisel));
                 startActivity(intent);
                 break;
             case R.id.Setings:
                 intent = new Intent(this, SetingsActivity.class);
                 intent.putExtra("max_number", String.valueOf(max_number));
+                intent.putExtra("kolichestvo_chisel", String.valueOf(kolichestvo_chisel));
                 startActivityForResult(intent, REQUEST_CODE_SETING);
-                //Log.e("myLogs", "requestCode = ");
                 break;
         }
 
@@ -48,11 +50,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onActivityResult(requestCode, resultCode, data);
 
         if (resultCode == RESULT_OK){
-            Log.e("myLogs", "requestCode = " + requestCode + ", resultCode = " + resultCode + " data = " +
-                    data.getIntExtra("max_number", 10));
+            //Log.e("myLogs", "requestCode = " + requestCode + ", resultCode = " + resultCode + " data = " +
+              //      data.getIntExtra("max_number", 10));
             switch (requestCode){
                 case REQUEST_CODE_SETING:
                     max_number = data.getIntExtra("max_number", 10);
+                    kolichestvo_chisel = data.getIntExtra("kolichestvo_chisel", 2);
+                    Log.e("myLogs", String.valueOf(kolichestvo_chisel));
                     break;
             }
         }

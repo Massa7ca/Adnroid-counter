@@ -4,20 +4,22 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
 
 import java.util.ArrayList;
 import java.util.Random;
 
 
 public class GameActivity extends AppCompatActivity{
-    private Button otv1, otv2, otv3, otv4, ran_Button ;
-    private ArrayList<Button> Buttons = new ArrayList<Button>();
+    private Button otv1;
+    private Button otv2;
+    private Button otv3;
+    private Button otv4;
+    private ArrayList<Button> Buttons = new ArrayList<>();
     private int max_number = 10;
+    private int kolichestvo_chisel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,61 +29,32 @@ public class GameActivity extends AppCompatActivity{
         otv3 = (Button) findViewById(R.id.otvet3);
         otv4 = (Button) findViewById(R.id.otvet4);
         Buttons.add(otv1); Buttons.add(otv2); Buttons.add(otv3); Buttons.add(otv4);
-        get_seting(getIntent());
+        getSeting(getIntent());
         main();
 
         //SetingsActivity a = SetingsActivity();
         //Log.e("sad", Integer.toString(a.raznicha));
     }
 
-    private void get_seting(Intent intend){
+    private void getSeting(Intent intend){
         max_number = Integer.valueOf(intend.getStringExtra("max_number"));
-
+        kolichestvo_chisel = Integer.valueOf(intend.getStringExtra("kolichestvo_chisel"));
     }
 
-    private String primer (){
-        int chislo = randint(0, max_number);
-        int chislo1 = randint(0, max_number);
-        int chislo2 = randint(0, max_number);
-        String strochka = Integer.toString(chislo) + "+" + Integer.toString(chislo1) +  "-" + Integer.toString(chislo2) + "=";
-
-        fillTextView(Integer.toString(chislo) + " + " + Integer.toString(chislo1) +  " - " + Integer.toString(chislo2) + " = ");
-        return strochka;
+    private String getVirozhenie(){
+        Randomvirozhenie virozh = new Randomvirozhenie(2, max_number, kolichestvo_chisel, 1, true, true, true, false);
+        return virozh.virozhenie();
     }
-    private int get_otvet(String str){
-        ArrayList<String> list = new ArrayList<String>();
-        String now = "";
-        for (int i = 0; i <= str.length()-1; i++) {
-            String element = String.valueOf(str.charAt(i));
-            if (element.equals("+") || element.equals("-") || element.equals("=")) {
-                list.add(now);
-                list.add(element);
-                //list.()
-                now = "";
-            } else{
-                now += element;
-            }
-        }
-
-        int otvet = Integer.valueOf(list.get(0));
-        for (int i = 1; i <= list.size()-2; i+=2) {
-            String znack = list.get(i);
-            String chislo = list.get(i+1);
-            //Log.e(znack, chislo);
-            if (znack.equals("+")) {
-                otvet += Integer.valueOf(chislo);
-            } else if (znack.equals("-")) {
-                otvet -= Integer.valueOf(chislo);
-            }
-
-        }
-
-        //Log.e(list.toString(), str);
-        return otvet;
+    private int getOtvet(String str){
+        Eval a = new Eval(str);
+        return Integer.parseInt(a.otvet());
     }
+
     private void main(){
-        String Primer = primer();
-        int otvet = get_otvet(Primer);
+        String Primer = getVirozhenie();
+        fillTextView(" " + Primer + " =  ");
+        int otvet = getOtvet(Primer);
+        Button ran_Button;
         for (int i = 0; i <= Buttons.size()-1; i++) {
             ran_Button = Buttons.get(i);
             ran_Button.setTextColor(Color.BLACK);
@@ -89,13 +62,13 @@ public class GameActivity extends AppCompatActivity{
         }
         ran_Button = Buttons.get(randint(0, 3));
         ran_Button.setText(String.valueOf(otvet));
-        On_Click(String.valueOf(otvet), otv1);
-        On_Click(String.valueOf(otvet), otv2);
-        On_Click(String.valueOf(otvet), otv3);
-        On_Click(String.valueOf(otvet), otv4);
+        OnClick(String.valueOf(otvet), otv1);
+        OnClick(String.valueOf(otvet), otv2);
+        OnClick(String.valueOf(otvet), otv3);
+        OnClick(String.valueOf(otvet), otv4);
 
     }
-    private void On_Click(String otvett, Button Knopka){
+    private void OnClick(String otvett, Button Knopka){
         final String otvet_string = otvett;
         final Button knopka = Knopka;
 

@@ -2,31 +2,121 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="/home/kairat/AndroidStudioProjects/counter/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/home/kairat/.android/build-cache/cc2d09dca87301e8b21d99b0f982f09a9b667b05/output/jars/classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="26.0.2"
-        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="/home/kairat/AndroidStudioProjects/counter/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_17ca9aa61c2eb2e81b89c0690cd036e0c6f8b579/classes.dex" />
+        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
+        <dex dex="/home/kairat/AndroidStudioProjects/counter/app/build/intermediates/pre-dexed/debug/classes_34e62e45116e787ceac13f00291b43e82112aa44.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/home/kairat/AndroidStudioProjects/counter/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/home/kairat/.android/build-cache/ce33cc66e35bc85e8f8e08347e9e5d5c5b4ba233/output/jars/classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="26.0.2"
-        sha1="e4232ca22e2e993c080926504f5a32df6376fb20">
-        <dex dex="/home/kairat/AndroidStudioProjects/counter/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_826e1e3c1df5aab59cc8b275324801e1af11c094/classes.dex" />
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/home/kairat/AndroidStudioProjects/counter/app/build/intermediates/pre-dexed/debug/classes_afa17ec0b33ee86da39fb6031a93d1005d942b35.jar" />
     </item>
     <item
-        is-multidex="true"
+        is-multidex="false"
+        jar="/home/kairat/.android/build-cache/c3e0a19a520bf954dc8b5a32fad0cf4924ee2e7f/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
+        <dex dex="/home/kairat/AndroidStudioProjects/counter/app/build/intermediates/pre-dexed/debug/classes_abf7c3914b525cc5bc4d484bff26c9183a02be6f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/kairat/.android/build-cache/587731b6c1a109b6a9757cddbc3b21e4afc90776/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/kairat/AndroidStudioProjects/counter/app/build/intermediates/pre-dexed/debug/classes_1e3643851daaa74b1e934c9e5ee80e18fd946bdf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/kairat/.android/build-cache/6faa6d119362de953a95e4a5519b76500a110bbd/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
+        <dex dex="/home/kairat/AndroidStudioProjects/counter/app/build/intermediates/pre-dexed/debug/classes_d1571837ca4f700fc7c436cab63a5fdfc74c6359.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/kairat/.gradle/caches/modules-2/files-2.1/com.wu-man/android-bsf-api/3.1.3/f89b7955c5b01302e2227d75ee9ee24e5dc611fb/android-bsf-api-3.1.3.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="26.0.2"
         sha1="f89b7955c5b01302e2227d75ee9ee24e5dc611fb">
-        <dex dex="/home/kairat/AndroidStudioProjects/counter/app/build/intermediates/transforms/dex/debug/folders/1000/10/android-bsf-api-3.1.3_e91b39dc0ff57c4bb95c2878b1e6fb11cce89c16/classes.dex" />
+        <dex dex="/home/kairat/AndroidStudioProjects/counter/app/build/intermediates/pre-dexed/debug/android-bsf-api-3.1.3_e91b39dc0ff57c4bb95c2878b1e6fb11cce89c16.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/kairat/.android/build-cache/58facfa62b85370975a6da1467cf709c2be5f640/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="952944218ecedea1554a513dec0c14d570642843">
+        <dex dex="/home/kairat/AndroidStudioProjects/counter/app/build/intermediates/pre-dexed/debug/classes_3e6026b97c222b0681248544f156a0291c8ee227.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/kairat/.android/build-cache/b5e7fef08dbd9ab76b05f01874f8b56bc9156f1f/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
+        <dex dex="/home/kairat/AndroidStudioProjects/counter/app/build/intermediates/pre-dexed/debug/classes_b0f927fbf07a109da144067b6e290b168328f6b7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/kairat/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/26.0.0-alpha1/support-annotations-26.0.0-alpha1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="023ee503b631f69511e335a061ea008f8da60f40">
+        <dex dex="/home/kairat/AndroidStudioProjects/counter/app/build/intermediates/pre-dexed/debug/support-annotations-26.0.0-alpha1_35d50582b513096276d7d8d051324bb736a13539.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/kairat/.android/build-cache/373817e72fffa33d4345704af061a6da47e5a739/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
+        <dex dex="/home/kairat/AndroidStudioProjects/counter/app/build/intermediates/pre-dexed/debug/classes_7e84458140491f4443e075324816fe6d4464153b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/kairat/.android/build-cache/1338b55f6feb0db65473b012599fe4696e93e9f1/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
+        <dex dex="/home/kairat/AndroidStudioProjects/counter/app/build/intermediates/pre-dexed/debug/classes_d0496e28b163fabf92c45a80c1844dfbb58c65c8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/kairat/Android/Sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="/home/kairat/AndroidStudioProjects/counter/app/build/intermediates/pre-dexed/debug/constraint-layout-solver-1.0.2_425e91a0afe748d416f544b1fdc56e52efb50bb7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/kairat/.android/build-cache/485c88f77e4cd966013794af5261ee736f401fc6/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="9935891f23923f39d002087085d9696568a9f657">
+        <dex dex="/home/kairat/AndroidStudioProjects/counter/app/build/intermediates/pre-dexed/debug/classes_44127481faeb316024daef39f641dfed05afb408.jar" />
     </item>
 
 </items>
