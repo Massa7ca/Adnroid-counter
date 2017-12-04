@@ -1,6 +1,7 @@
 package com.example.kairat.counter;
 
 import android.content.Intent;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,25 +9,26 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-public class SetingsActivity extends AppCompatActivity implements View.OnClickListener, SeekBar.OnSeekBarChangeListener{
-    Button save;
+public class SetingsActivity extends AppCompatActivity implements View.OnClickListener {
     private TextView max_number_text;
     private TextView kolichestvo_chisel_text;
     private SeekBar max_number_Bar;
     private SeekBar kolichestvo_chisel_Bar;
-    @Override
+    private TextBarPair max_number;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setings);
-        save = (Button) findViewById(R.id.save_button);
+        Button save = (Button) findViewById(R.id.save_button);
         save.setOnClickListener(this);
         max_number_text = (TextView)findViewById(R.id.max_number_text);
         max_number_Bar = (SeekBar)findViewById(R.id.max_number_seekBar);
-        max_number_Bar.setOnSeekBarChangeListener(this);
+        max_number = new TextBarPair(max_number_Bar, max_number_text, 10, 200);
+        //max_number.onCreate(savedInstanceState);
+        //max_number_Bar.setOnSeekBarChangeListener(this);
         ///////////////////////////////////////////////////////////
         kolichestvo_chisel_text = (TextView)findViewById(R.id.kolichestvo_chisel_text);
         kolichestvo_chisel_Bar = (SeekBar)findViewById(R.id.kolichestvo_chisel_seekBar);
-        kolichestvo_chisel_Bar.setOnSeekBarChangeListener(this);
+        //kolichestvo_chisel_Bar.setOnSeekBarChangeListener(this);
         getSeting(getIntent());
 
         //SetingsActivity a = SetingsActivity();
@@ -53,29 +55,9 @@ public class SetingsActivity extends AppCompatActivity implements View.OnClickLi
                 intent.putExtra("max_number", max_number_Bar.getProgress());
                 intent.putExtra("kolichestvo_chisel", kolichestvo_chisel_Bar.getProgress());
                 break;
-
-
         }
         setResult(RESULT_OK, intent);
         finish();
     }
 
-    @Override
-    public void onProgressChanged(SeekBar SeekBarr, int progress, boolean fromUser) {
-        if(SeekBarr.getId() == R.id.max_number_seekBar) {
-            max_number_text.setText(String.valueOf(SeekBarr.getProgress()));
-        } else if(SeekBarr.getId() == R.id.kolichestvo_chisel_seekBar) {
-            kolichestvo_chisel_text.setText(String.valueOf(SeekBarr.getProgress()));
-        }
-    }
-
-    @Override
-    public void onStartTrackingTouch(SeekBar max_number_Bar) {
-
-    }
-
-    @Override
-    public void onStopTrackingTouch(SeekBar max_number_Bar) {
-
-    }
 }

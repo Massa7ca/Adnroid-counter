@@ -2,6 +2,15 @@
 <items version="2" >
 
     <item
+        is-multidex="true"
+        jar="/home/kairat/AndroidStudioProjects/counter/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/home/kairat/AndroidStudioProjects/counter/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_17ca9aa61c2eb2e81b89c0690cd036e0c6f8b579/classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="/home/kairat/.android/build-cache/cc2d09dca87301e8b21d99b0f982f09a9b667b05/output/jars/classes.jar"
         jumboMode="false"
@@ -63,6 +72,15 @@
         revision="26.0.2"
         sha1="952944218ecedea1554a513dec0c14d570642843">
         <dex dex="/home/kairat/AndroidStudioProjects/counter/app/build/intermediates/pre-dexed/debug/classes_3e6026b97c222b0681248544f156a0291c8ee227.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/kairat/AndroidStudioProjects/counter/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="d999da5be024f3aa9e14e8823210e1be74a73ecb">
+        <dex dex="/home/kairat/AndroidStudioProjects/counter/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_826e1e3c1df5aab59cc8b275324801e1af11c094/classes.dex" />
     </item>
     <item
         is-multidex="false"
